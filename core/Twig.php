@@ -16,7 +16,7 @@ class Twig
             $loader = new FilesystemLoader(['../app/views', '../templates']); // Add templates directory
             self::$twig = new Environment($loader, [
                 'cache' => '../cache', // Carpeta para la caché
-                'debug' => true,       // Cambiar a false en producción
+                'debug' => DEBUG,      // Usar la constante DEBUG
             ]);
         }
 

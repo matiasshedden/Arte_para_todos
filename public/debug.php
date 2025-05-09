@@ -22,6 +22,14 @@ $files = [
 foreach ($files as $file) {
     echo $file . ': ' . (file_exists($file) ? 'EXISTS' : 'MISSING') . "\n";
 }
-
+/*
 echo '</pre>';
+
+echo '<h2>Database Connection Test</h2>';
+try {
+    require_once __DIR__ . '/../database/connection.php';
+    echo 'Connection successful to database: ' . DB_NAME;
+} catch (Exception $e) {
+    echo 'Database connection failed: ' . $e->getMessage();
+}*/
 ?>

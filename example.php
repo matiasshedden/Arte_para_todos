@@ -6,7 +6,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');
 $twig = new \Twig\Environment($loader, [
     'cache' => false, // Set to a directory path for production
-    'debug' => true,
+    'debug' => DEBUG, // Usar la constante DEBUG
 ]);
 
 // Example data

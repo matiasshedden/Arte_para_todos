@@ -1,0 +1,32 @@
+<!-- filepath: c:\xampp\htdocs\Arte_para_todos\templates\debug.twig -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debug Information</h1>
+    <section>
+        <h2>Details</h2>
+        <pre>{{ debugContent|raw }}</pre>
+    </section>
+    <section>
+        <h2>Database Connection Test</h2>
+        <pre>{{ dbTestResult }}</pre>
+    </section>
+</body>
+</html>

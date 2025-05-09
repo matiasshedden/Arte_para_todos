@@ -18,7 +18,8 @@ class Router {
             $path = substr($path, strlen($basePath));
         }
         
-        // Ensure we have at least '/' as the path
+        // Normalize the path
+        $path = rtrim($path, '/'); // Remove trailing slash
         if (empty($path)) {
             $path = '/';
         }

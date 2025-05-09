@@ -1,6 +1,6 @@
 Options -Indexes
 RewriteEngine On
-RewriteBase /localhost/Arte_para_todos
+RewriteBase /Arte_para_todos/public
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php [QSA,L]
