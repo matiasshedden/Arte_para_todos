@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .menu-item {
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+        .price {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    
+    <p>Hello, {{ name }}!</p>
+    
+    <p>Current date and time: {{ current_date|date('F j, Y, g:i a') }}</p>
+    
+    <h2>Our Menu</h2>
+    
+    {% if menu_items|length > 0 %}
+        <div class="menu">
+            {% for item in menu_items %}
+                <div class="menu-item">
+                    <span>{{ item.name }}</span>
+                    <span class="price">${{ item.price|number_format(2) }}</span>
+                </div>
+            {% endfor %}
+        </div>
+        
+        <p>Total items: {{ menu_items|length }}</p>
+    {% else %}
+        <p>No menu items available.</p>
+    {% endif %}
+    
+    <div>
+        <h3>Twig features demonstrated:</h3>
+        <ul>
+            <li>Variable output: {{ "{{ variable }}" }}</li>
+            <li>Filters: {{ "{{ variable|filter }}" }}</li>
+            <li>Control structures: {% verbatim %}{% if %}, {% for %}{% endverbatim %}</li>
+            <li>Template inheritance (not shown, but available)</li>
+        </ul>
+    </div>
+</body>
+</html>
+

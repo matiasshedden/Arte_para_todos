@@ -1,0 +1,264 @@
+/* Estilos generales */
+body {
+    background-color: #fff8f0;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para las imágenes */
+.grid img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Navegación */
+nav {
+    background-color: #8B0000;
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row; /* Alinea los elementos en fila */
+    justify-content: space-between; /* Distribuye los <ul> horizontalmente */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Asegura que ocupen todo el ancho del contenedor */
+}
+
+nav ul li {
+    margin: 0 60px 0 0; /* Incrementa la separación entre las palabras */
+}
+
+nav ul li.nav-logo-container {
+    padding-bottom: 20px; /* Añade espacio inferior solo al logo */
+}
+
+/* Logo en la navbar */
+.responsive-logo {
+    max-height: 60px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.nav-logo-   {
+    margin-left: auto; /* Empuja el logo a la derecha */
+    padding-right: 0;
+}
+
+/* Hamburger menu */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* HOME */
+#home {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    text-align: center; /* Centra el texto de la sección home */
+}
+
+/* MENU - layout en columnas */
+#menu {
+    background-color: #fff0e6; /* Color ligeramente diferente en sintonía con la paleta actual */
+    border: 1px solid #ccc; /* Pequeño borde gris */
+    padding: 1rem; /* Espaciado interno para mejor presentación */
+    border-radius: 5px; /* Bordes ligeramente redondeados para un mejor diseño */
+}
+
+#menu .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#menu .menu-content {
+    flex: 1;
+    min-width: 250px;
+}
+
+#menu .menu-images {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu .menu-images img {
+    flex: 0 0 calc(33.33% - 10px);
+    min-width: 150px;
+    max-width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border:#333 1px solid;
+}
+
+/* RESERVATION - layout en columnas */
+#reservation .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#reservation hgroup,
+#reservation form {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+}
+
+#reservation form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+}
+
+#reservation .reservation-image {
+    flex: 2;
+    min-width: 300px;
+}
+
+#reservation .reservation-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Botón de reserva */
+button {
+    background-color: #8B0000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #A52A2A;
+}
+
+/* Formulario */
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #8B0000;
+    color: white;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    /* Menú hamburguesa */
+    .hamburger-menu {
+        display: block;
+        order: 0;
+    }
+    
+    nav ul li:not(:first-child):not(.nav-logo-container) {
+        display: none;
+    }
+    
+    nav.responsive ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav.responsive ul li {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .nav-logo-container {
+        margin-left: auto;
+        padding: 0 0 30;
+    }
+    
+    .responsive-logo {
+        max-height: 30px;
+    }
+    
+    /* Ajustes para secciones en móvil */
+    #menu .container,
+    #reservation .container {
+        flex-direction: column;
+    }
+    
+    #menu .menu-images {
+        justify-content: center;
+    }
+    
+    #menu .menu-images img {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+/* Para pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #menu .menu-images img {
+        flex: 0 0 calc(50% - 10px);
+    }
+}

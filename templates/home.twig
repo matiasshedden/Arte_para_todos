@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ base_url }}/Arte_para_todos/public/styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="container-fluid">
+        <ul>
+            <li class="nav-logo-container">
+                <img src="{{ base_url }}/Arte_para_todos/public/img/logo.jpg" alt="Logo" class="responsive-logo" width="200" height="auto"/>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reservation">Reservas</a></li>
+            <li><a href="#about">Nosotros</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME -->
+    <main class="container">
+        <div id="home" class="grid">
+            <section>
+                <hgroup>
+                    <h2>Bienvenidos a "Arte para todos"</h2>
+                    <h3>Cooperativa de servicios con inclusion neurodiversa</h3>
+                </hgroup>
+                <p>Solo, con amigos o en familia, un lugar para hacer de la comida una experiencia relajante.</p>
+                <figure>
+                    <img src="{{ base_url }}/Arte_para_todos/public/img/restaurante.jpg" alt="A welcoming restaurant ambiance"/>
+                </figure>
+                <h3>Descubra nuestra experiencia</h3>
+                <p>En Arte para todos creemos que la calma en la preparacion se transmite a los comensales.</p>
+            </section>
+        </div>
+
+        <!-- MENU -->
+        <section id="menu" aria-label="Menu">
+            <div class="container">
+                <div class="menu-content">
+                    <hgroup>
+                        <h2>Nuestro menu</h2>
+                        <h3>Una sinfonia de sabores</h3>
+                    </hgroup>
+                    <article class="grid">
+                        <div>
+                            <h3>Platos de la casa</h3>
+                            <p><strong>Pasta</strong> - $XX<br>Fresca, casera, deliciosa.</p>
+                            <p><strong>Asado</strong> - $XX<br>Con la mejor carne y en el punto justo.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="menu-images">
+                    <img src="{{ base_url }}/Arte_para_todos/public/img/food-bowl.jpg" alt="Plato 1">
+                    <img src="{{ base_url }}/Arte_para_todos/public/img/desayuno.jpg" alt="Plato 2">
+                    <img src="{{ base_url }}/Arte_para_todos/public/img/carne.jpg" alt="Plato 3">
+                </div>
+            </div>
+        </section>
+
+        <!-- RESERVATION -->
+        <section id="reservation" aria-label="Reservation">
+            <div class="container">
+                <form class="grid">
+                    <hgroup>
+                        <h2>Reserve su mesa</h2>
+                        <h3>Unico dia: Sabados de 20:00 a 23:00</h3>
+                    </hgroup>
+                    <input type="text" id="name" name="name" placeholder="Nombre Completo" aria-label="Your Name" required />
+                    <input type="tel" id="tel" name="tel" placeholder="celular de contacto" aria-label="Your tel" required />
+                    <input type="date" id="date" name="date" aria-label="Reservation Date" required />
+                    <input type="time" id="time" name="time" aria-label="Reservation Time" required />
+                    <input type="number" id="nro_personas" name="nro_personas" placeholder="Número de personas" aria-label="Number of people" required min="1" />
+                    <button type="submit" onclick="event.preventDefault()">Reserve ahora</button>
+                </form>
+                <div class="reservation-image">
+                    <img src="{{ base_url }}/Arte_para_todos/public/img/restaurante.jpg" alt="Imagen de reserva">
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US -->
+        <section id="about" aria-label="About Us">
+            <div class="container">
+                <hgroup>
+                    <h2>Acerca de nosotros</h2>
+                </hgroup>
+                <p>Cooperativa de servicios gastronomicos.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="container">
+        <small><a href="#">Privacy Policy</a> • <a href="#">Contact Us</a></small>
+    </footer>
+    <script src="{{ base_url }}/Arte_para_todos/public/script.js"></script>
+</body>
+</html>

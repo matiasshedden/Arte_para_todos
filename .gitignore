@@ -1,0 +1,46 @@
+# Dependencias de PHP
+/vendor/
+composer.phar
+*.phar
+
+# Archivos de caché y logs
+/cache/
+/logs/
+*.log
+*.cache
+
+# Archivos de configuración y seguridad
+.env
+.env.*
+!.env.example
+config/*.local.php
+**/config/secrets.php
+*.key
+*.pem
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDEs y editores
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Archivos temporales y backups
+*.bak
+*.tmp
+*.temp
+*.zip
+*.rar
+*.tar
+*.gz
+
+# Archivos específicos del proyecto
+project.zip
+
