@@ -1,5 +1,5 @@
 CREATE TABLE reserva (
-    dni VARCHAR(20) PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     telefono VARCHAR(15) NOT NULL,
     fecha DATE NOT NULL,

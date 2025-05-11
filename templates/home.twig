@@ -66,17 +66,17 @@
         <!-- RESERVATION -->
         <section id="reservation" aria-label="Reservation">
             <div class="container">
-                <form class="grid">
+                <form class="grid" method="POST" action="/Arte_para_todos/process_reservation.php">
                     <hgroup>
                         <h2>Reserve su mesa</h2>
                         <h3>Unico dia: Sabados de 20:00 a 23:00</h3>
                     </hgroup>
-                    <input type="text" id="name" name="name" placeholder="Nombre Completo" aria-label="Your Name" required />
-                    <input type="tel" id="tel" name="tel" placeholder="celular de contacto" aria-label="Your tel" required />
-                    <input type="date" id="date" name="date" aria-label="Reservation Date" required />
-                    <input type="time" id="time" name="time" aria-label="Reservation Time" required />
-                    <input type="number" id="nro_personas" name="nro_personas" placeholder="Número de personas" aria-label="Number of people" required min="1" />
-                    <button type="submit" onclick="event.preventDefault()">Reserve ahora</button>
+                    <input type="text" id="name" name="name" placeholder="Nombre Completo" required />
+                    <input type="tel" id="tel" name="tel" placeholder="Celular de contacto" required />
+                    <input type="date" id="date" name="date" required />
+                    <input type="time" id="time" name="time" required />
+                    <input type="number" id="nro_personas" name="nro_personas" placeholder="Número de personas" required min="1" />
+                    <button type="submit">Reserve ahora</button>
                 </form>
                 <div class="reservation-image">
                     <img src="{{ base_url }}/Arte_para_todos/public/img/restaurante.jpg" alt="Imagen de reserva">

@@ -1,5 +1,6 @@
 <?php
 // filepath: c:\xampp\htdocs\Arte_para_todos\app\controllers\DebugController.php
+require_once __DIR__ . '/../../database/queries.php';
 
 class DebugController {
     public function index() {
@@ -18,11 +19,15 @@ class DebugController {
                 $dbTestResult = 'Database connection failed: ' . $e->getMessage();
             }
 
+            // Obtener reservas ANTES de renderizar la vista
+            $reservas = obtenerReservas();
+
             // Renderizar la vista con Twig
             require_once __DIR__ . '/../views/DebugView.php';
             DebugView::render([
                 'debugContent' => $debugContent,
-                'dbTestResult' => $dbTestResult
+                'dbTestResult' => $dbTestResult,
+                'reservas' => $reservas
             ]);
         } else {
             http_response_code(403);

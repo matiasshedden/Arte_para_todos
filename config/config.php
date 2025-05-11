@@ -10,7 +10,7 @@ define('DEBUG', true);
 
 // Database configuration
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'Arte_para_todos');
+define('DB_NAME', 'arte_para_todos');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 ?>

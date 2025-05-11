@@ -15,8 +15,7 @@ $files = [
     '../core/Router.php',
     '../config/config.php',
     '../app/controllers/HomeController.php',
-    '../app/controllers/MenuController.php',
-    '../app/controllers/ReservationController.php'
+    '../app/controllers/DebugController.php'
 ];
 
 foreach ($files as $file) {
