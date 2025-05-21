@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="{{ base_url }}/Arte_para_todos/public/styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="container-fluid">
+        <ul>
+            <li class="nav-logo-container">
+                <img src="{{ base_url }}/Arte_para_todos/public/img/logo.jpg" alt="Logo" class="responsive-logo" width="200" height="auto"/>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="{{ base_url }}/Arte_para_todos/">Home</a></li>
+        </ul>
+    </nav>
+
+    <!-- LOGIN FORM -->
+    <main class="container">
+        <section id="login" aria-label="Login Form">
+            <div class="container">
+                <form class="grid" id="admin-login-form" method="POST" action="/admin/login">
+                    <hgroup>
+                        <h2>Admin Login</h2>
+                    </hgroup>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="container">
+        <small><a href="#">Privacy Policy</a> • <a href="#">Contact Us</a></small>
+    </footer>
+</body>
+</html>

@@ -11,6 +11,7 @@ $router = new Router();
 // Define routes
 $router->add('/', [new HomeController(), 'index']);
 $router->add('/debug', [new DebugController(), 'index']);
+$router->add('/admin', ['App\\Controllers\\AdminController', 'showLoginForm']); // New route for admin login
 
 // Dispatch the request
 $router->dispatch($_SERVER['REQUEST_URI']);
