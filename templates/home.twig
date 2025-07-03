@@ -32,7 +32,7 @@
                 </hgroup>
                 <p>Solo, con amigos o en familia, un lugar para hacer de la comida una experiencia relajante.</p>
                 <figure>
-                    <img src="{{ base_url }}/Arte_para_todos/public/img/restaurante.jpg" alt="A welcoming restaurant ambiance"/>
+                    <img src="{{ base_url }}/Arte_para_todos/public/img/APT_Frente_izq.jpg" alt="A welcoming restaurant ambiance"/>
                 </figure>
                 <h3>Descubra nuestra experiencia</h3>
                 <p>En Arte para todos creemos que la calma en la preparacion se transmite a los comensales.</p>
@@ -78,8 +78,10 @@
                     <input type="number" id="nro_personas" name="nro_personas" placeholder="Número de personas" required min="1" />
                     <button type="submit">Reserve ahora</button>
                 </form>
-                <div class="reservation-image">
-                    <img src="{{ base_url }}/Arte_para_todos/public/img/restaurante.jpg" alt="Imagen de reserva">
+                <div class="reservation-image" style="display: flex; flex-direction: row; gap: 1rem;">
+                    <img src="{{ base_url }}/Arte_para_todos/public/img/APT_salon_3.jpg" alt="Imagen de reserva" style="flex: 1 1 0; width: 0; height: auto; object-fit: cover;">
+                    <img src="{{ base_url }}/Arte_para_todos/public/img/APT_patio.jpg" alt="Imagen de reserva 2" style="flex: 1 1 0; width: 0; height: auto; object-fit: cover;">
+                    <img src="{{ base_url }}/Arte_para_todos/public/img/APT_salon_2.jpg" alt="Imagen de reserva 3" style="flex: 1 1 0; width: 0; height: auto; object-fit: cover;">
                 </div>
             </div>
         </section>
@@ -97,7 +99,11 @@
 
     <!-- FOOTER -->
     <footer class="container">
-        <small><a href="#">Privacy Policy</a> • <a href="#">Contact Us</a></small>
+        <small>
+            <a href="#">Privacy Policy</a> • 
+            <a href="#">Contact Us</a> • 
+            <a href="{{ base_url }}/Arte_para_todos/public/admin">Admin</a>
+        </small>
     </footer>
     <script src="{{ base_url }}/Arte_para_todos/public/script.js"></script>
 </body>

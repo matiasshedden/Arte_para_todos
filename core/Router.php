@@ -33,8 +33,13 @@ class Router {
                 call_user_func($this->routes[$path]);
             }
         } else {
-            http_response_code(404);
-            echo "404 Not Found - Path '{$path}' could not be found.";
+            if ($path === '/admin') {
+                require_once __DIR__ . '/../app/controllers/AdminController.php';
+                (new AdminController())->loginForm();
+            } else {
+                http_response_code(404);
+                echo "404 Not Found - Path '{$path}' could not be found.";
+            }
         }
     }
 }
