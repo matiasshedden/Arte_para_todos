@@ -14,9 +14,27 @@ composer.phar
 .env.*
 !.env.example
 config/*.local.php
+config/*.dev.php
+config/*.staging.php
+config/*.production.php
 **/config/secrets.php
 *.key
 *.pem
+*.crt
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Archivos con credenciales
+**/passwords.txt
+**/credentials.txt
+**/secrets.txt
+**/database.sql
+**/dump.sql
+**/backup.sql
+**/users.csv
+**/admin_users.csv
 
 # Archivos del sistema
 .DS_Store
@@ -31,16 +49,78 @@ Desktop.ini
 *.swp
 *.swo
 *~
+.phpstorm.meta.php
+_ide_helper.php
+_ide_helper_models.php
+.phpunit.result.cache
 
 # Archivos temporales y backups
 *.bak
+*.backup
 *.tmp
 *.temp
+*.orig
+*.old
 *.zip
 *.rar
 *.tar
 *.gz
+*.7z
+
+# Archivos de debug y testing
+*.debug
+*.test
+debug_*.php
+test_*.php
+**/debug.php
+**/test.php
+
+# Archivos subidos por usuarios
+/uploads/
+/public/uploads/
+/storage/
+/tmp/
 
 # Archivos específicos del proyecto
 project.zip
+*.sql
+!database/migrations/*.sql
+!database/init_admin.sql
+
+# Archivos de sesión
+/sessions/
+/tmp/sess_*
+
+# Archivos de error de PHP
+php_errors.log
+error_log
+
+# Archivos de configuración específicos del servidor
+.htaccess.bak
+.htpasswd
+robots.txt.bak
+
+# Archivos de entorno específicos
+.env.local
+.env.dev
+.env.development
+.env.staging
+.env.production
+.env.backup
+
+# Archivos de base de datos
+*.db
+*.sqlite
+*.sqlite3
+*.mdb
+*.accdb
+
+# Archivos de configuración específicos
+wp-config.php
+config.ini
+config.cfg
+settings.ini
+settings.cfg
+database.ini
+database.cfg
 

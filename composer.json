@@ -1,5 +1,23 @@
 {
+    "name": "arte-para-todos/restaurant-app",
+    "description": "Sistema de gestión para restaurante Arte para Todos - Cooperativa con inclusión neurodiversa",
+    "type": "project",
     "require": {
-        "twig/twig": "^3.21"
+        "php": ">=7.4",
+        "twig/twig": "^3.21",
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "ArtePT\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php -r \"copy('.env.example', '.env');\""
+        ]
     }
 }

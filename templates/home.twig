@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ base_url }}/Arte_para_todos/public/styles.css">
+    <link rel="stylesheet" href="{{ base_url }}/public/assets/css/styles.css">
 </head>
 <body>
     <!-- NAVBAR -->
     <nav class="container-fluid">
         <ul>
             <li class="nav-logo-container">
-                <img src="{{ base_url }}/Arte_para_todos/public/img/logo.jpg" alt="Logo" class="responsive-logo" width="200" height="auto"/>
+                <img src="{{ base_url }}/public/img/logo.jpg" alt="Logo" class="responsive-logo" width="200" height="auto"/>
             </li>
         </ul>
         <ul>
@@ -32,7 +32,7 @@
                 </hgroup>
                 <p>Solo, con amigos o en familia, un lugar para hacer de la comida una experiencia relajante.</p>
                 <figure>
-                    <img src="{{ base_url }}/Arte_para_todos/public/img/APT_Frente_izq.jpg" alt="A welcoming restaurant ambiance"/>
+                    <img src="{{ base_url }}/public/img/APT_Frente_izq.jpg" alt="A welcoming restaurant ambiance"/>
                 </figure>
                 <h3>Descubra nuestra experiencia</h3>
                 <p>En Arte para todos creemos que la calma en la preparacion se transmite a los comensales.</p>
@@ -56,9 +56,9 @@
                     </article>
                 </div>
                 <div class="menu-images">
-                    <img src="{{ base_url }}/Arte_para_todos/public/img/food-bowl.jpg" alt="Plato 1">
-                    <img src="{{ base_url }}/Arte_para_todos/public/img/desayuno.jpg" alt="Plato 2">
-                    <img src="{{ base_url }}/Arte_para_todos/public/img/carne.jpg" alt="Plato 3">
+                    <img src="{{ base_url }}/public/img/food-bowl.jpg" alt="Plato 1">
+                    <img src="{{ base_url }}/public/img/desayuno.jpg" alt="Plato 2">
+                    <img src="{{ base_url }}/public/img/carne.jpg" alt="Plato 3">
                 </div>
             </div>
         </section>
@@ -66,7 +66,7 @@
         <!-- RESERVATION -->
         <section id="reservation" aria-label="Reservation">
             <div class="container">
-                <form class="grid" method="POST" action="/Arte_para_todos/process_reservation.php">
+                <form class="grid" method="POST" action="{{ base_url }}/public/reservation">
                     <hgroup>
                         <h2>Reserve su mesa</h2>
                         <h3>Unico dia: Sabados de 20:00 a 23:00</h3>
@@ -79,9 +79,9 @@
                     <button type="submit">Reserve ahora</button>
                 </form>
                 <div class="reservation-image" style="display: flex; flex-direction: row; gap: 1rem;">
-                    <img src="{{ base_url }}/Arte_para_todos/public/img/APT_salon_3.jpg" alt="Imagen de reserva" style="flex: 1 1 0; width: 0; height: auto; object-fit: cover;">
-                    <img src="{{ base_url }}/Arte_para_todos/public/img/APT_patio.jpg" alt="Imagen de reserva 2" style="flex: 1 1 0; width: 0; height: auto; object-fit: cover;">
-                    <img src="{{ base_url }}/Arte_para_todos/public/img/APT_salon_2.jpg" alt="Imagen de reserva 3" style="flex: 1 1 0; width: 0; height: auto; object-fit: cover;">
+                    <img src="{{ base_url }}/public/img/APT_salon_3.jpg" alt="Imagen de reserva" style="flex: 1 1 0; width: 0; height: auto; object-fit: cover;">
+                    <img src="{{ base_url }}/public/img/APT_patio.jpg" alt="Imagen de reserva 2" style="flex: 1 1 0; width: 0; height: auto; object-fit: cover;">
+                    <img src="{{ base_url }}/public/img/APT_salon_2.jpg" alt="Imagen de reserva 3" style="flex: 1 1 0; width: 0; height: auto; object-fit: cover;">
                 </div>
             </div>
         </section>
@@ -102,9 +102,9 @@
         <small>
             <a href="#">Privacy Policy</a> • 
             <a href="#">Contact Us</a> • 
-            <a href="{{ base_url }}/Arte_para_todos/public/admin">Admin</a>
+            <a href="{{ base_url }}/public/admin">Admin</a>
         </small>
     </footer>
-    <script src="{{ base_url }}/Arte_para_todos/public/script.js"></script>
+    <script src="{{ base_url }}/public/assets/js/script.js"></script>
 </body>
 </html>

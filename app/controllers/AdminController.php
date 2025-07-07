@@ -8,5 +8,8 @@ class AdminController {
             'base_url' => BASE_URL
         ]);
     }
-    // ...otros métodos...
+    public function uploadMenu() {
+        // Logic to upload menu
+        echo "Menu uploaded successfully.";
+    }
 }
